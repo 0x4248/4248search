@@ -35,5 +35,14 @@
     ["!wizh", "Wikipedia (中文)", "https://zh.wikipedia.org/wiki/$QUERY$"],
     ["!wiar", "Wikipedia (العربية)", "https://ar.wikipedia.org/wiki/$QUERY$"],
     ["!wisi", "Wikipedia (Simple English)", "https://simple.wikipedia.org/wiki/$QUERY$"],
-    ["!wf", "Wolfram Alpha", "https://www.wolframalpha.com/input/?i=$QUERY$"]
+    ["!wf", "Wolfram Alpha", "https://www.wolframalpha.com/input/?i=$QUERY$"],
+    ["!mdn", "MDN Web Docs", "https://developer.mozilla.org/en-US/search?q=$QUERY$"],
+    ["!npm", "npm", "https://www.npmjs.com/search?q=$QUERY$"],
+    ["!pypi", "PyPI", "https://pypi.org/search/?q=$QUERY$"],
+    ["!crates", "Crates.io", "https://crates.io/search?q=$QUERY$"],
+    ["!rubygems", "RubyGems", "https://rubygems.org/search?query=$QUERY$"],
+    ["!packagist", "Packagist", "https://packagist.org/?query=$QUERY$"],
+    ["!nuget", "NuGet", "https://www.nuget.org/packages?q=$QUERY$"],
+    ["!godoc", "GoDoc", "https://pkg.go.dev/search?q=$QUERY$"],
+    ["!docs", "DevDocs", "https://devdocs.io/#q=$QUERY$"]
 ]
