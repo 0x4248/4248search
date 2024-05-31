@@ -5,8 +5,9 @@
     --background-light: #2f2f2f;
     --border-color: #444;
     --background-hover: #444;
+    --blue: #3696fe;
+    --blue-dark: #2b78c9;
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -22,7 +23,7 @@ h1 {
 
 #searchContainer {
     position: relative;
-    width: 300px;
+    width: 400px;
     margin: 20px auto;
   
 }
@@ -62,8 +63,10 @@ h1 {
 }
 
 .bang-span {
-    color: #007bff;
+    color: var(--blue);
+    display: inline-block;
     font-weight: bold;
+    margin-bottom: 8px;
 }
 
 #searchBtn {
@@ -73,14 +76,56 @@ h1 {
     margin: 20px auto;
     padding: 10px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: var(--blue);
     color: var(--color-secondary);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 #searchBtn:hover {
-    background-color: #0056b3;
+    background-color: var(--blue-dark);
+    transform: scale(1.05);
+}
+
+a {
+    color: var(--color-primary);
+    cursor: none;
+}
+
+.footer {
+    background-color: var(--background-light);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    margin-top: 10px;
+    display: flex;
+}
+
+.flex-left{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.flex-right{
+    margin-right: auto;
+}
+
+.flex-right p {
+    margin: 0;
+}
+
+.footer img {
+    width: 80px;
+    height: 80px;
+    margin: 0 1rem;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.pixelate {
+    image-rendering: pixelated;
 }

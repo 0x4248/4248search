@@ -2,8 +2,8 @@ const bangs = [
     ["!w", "Wikipedia", "https://en.wikipedia.org/wiki/$QUERY$"],
     ["!y", "YouTube", "https://www.youtube.com/results?search_query=$QUERY$"],
     ["!d", "DuckDuckGo", "https://duckduckgo.com/?q=$QUERY$"],
-    ["!gh", "GitHub user", "https://www.github.com/$QUERY$"],
-    ["!ghr", "GitHub repos", "https://www.github.com/search?q=$QUERY$"],
+    ["!gh", "GitHub (users)", "https://www.github.com/$QUERY$"],
+    ["!ghr", "GitHub (repos)", "https://www.github.com/search?q=$QUERY$"],
     ["!a", "Amazon", "https://www.amazon.com/s?k=$QUERY$"],
     ["!r", "Reddit", "https://www.reddit.com/search?q=$QUERY$"],
     ["!tw", "Twitter", "https://twitter.com/search?q=$QUERY$"],
@@ -25,7 +25,7 @@ function generateDropdownItems(query) {
     dropdown.innerHTML = "";
     filteredBangs.forEach((bang, index) => {
         const bangElement = document.createElement("div");
-        bangElement.textContent = `${bang[0]} - ${bang[1]}`;
+        bangElement.innerHTML = `<strong>${bang[0]}</strong> - ${bang[1]}`;
         bangElement.classList.add("dropdown-item");
         bangElement.dataset.index = index;
         bangElement.addEventListener("click", () => {
@@ -82,7 +82,8 @@ document.addEventListener("keydown", (e) => {
 
 function selectBang(bang) {
     bangSpan.textContent = bang[0];
-    bangSpan.style.display = "inline";
+    searchInput.placeholder = `Search on ${bang[1]}`;
+    bangSpan.style.display = "inline-block";
     searchInput.value = searchInput.value.slice(bang[0].length).trim();
     clearDropdown();
 }
