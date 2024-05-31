@@ -44,5 +44,7 @@
     ["!packagist", "Packagist", "https://packagist.org/?query=$QUERY$"],
     ["!nuget", "NuGet", "https://www.nuget.org/packages?q=$QUERY$"],
     ["!godoc", "GoDoc", "https://pkg.go.dev/search?q=$QUERY$"],
-    ["!docs", "DevDocs", "https://devdocs.io/#q=$QUERY$"]
+    ["!dd", "DevDocs", "https://devdocs.io/#q=$QUERY$"]
+    ["!sh", "Shodan", "https://www.shodan.io/search?query=$QUERY$"],
+    ["!st", "Stack Overflow", "https://stackoverflow.com/search?q=$QUERY$"],
 ]
