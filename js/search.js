@@ -15,9 +15,14 @@ let selectedIndex = -1;
 
 function generateDropdownItems(query) {
     const filteredBangs = bangs.filter(bang => bang[0].startsWith(query) || `!${bang[1].toLowerCase()}`.startsWith(query));
-
+    let max = 10;
+    let i = 0;
     dropdown.innerHTML = "";
     filteredBangs.forEach((bang, index) => {
+        if (i >= max) {
+            dropdown.style.display = "block";
+            return;
+        }
         const bangElement = document.createElement("div");
         bangElement.innerHTML = `<strong>${bang[0]}</strong> - ${bang[1]}`;
         bangElement.classList.add("dropdown-item");
@@ -26,9 +31,8 @@ function generateDropdownItems(query) {
             selectBang(bang);
         });
         dropdown.appendChild(bangElement);
+        i++;
     });
-
-    dropdown.style.display = filteredBangs.length > 0 ? "block" : "none";
 }
 
 function clearDropdown() {
