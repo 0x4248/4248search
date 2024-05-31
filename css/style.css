@@ -1,7 +1,19 @@
+:root {
+    --color-primary: #dedede;
+    --color-secondary: #f7f7f7;
+    --background-main: #222;
+    --background-light: #2f2f2f;
+    --border-color: #444;
+    --background-hover: #444;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--background-main);
+    color: var(--color-primary);
 }
 
 h1 {
@@ -12,16 +24,19 @@ h1 {
     position: relative;
     width: 300px;
     margin: 20px auto;
+  
 }
 
 #search {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
+    color: var(--color-primary);
     border-radius: 5px;
     box-sizing: border-box;
     position: relative;
+    background-color: var(--background-light);
 }
 
 #dropdown {
@@ -30,8 +45,8 @@ h1 {
     top: calc(100% + 5px);
     left: 0;
     width: 100%;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-light);
     border-radius: 5px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -43,7 +58,7 @@ h1 {
 }
 
 #dropdown div:hover {
-    background-color: #f1f1f1;
+    background-color: var(--background-hover);
 }
 
 .bang-span {
@@ -59,7 +74,7 @@ h1 {
     padding: 10px;
     font-size: 16px;
     background-color: #007bff;
-    color: #fff;
+    color: var(--color-secondary);
     border: none;
     border-radius: 5px;
     cursor: pointer;
